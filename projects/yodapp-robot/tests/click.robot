@@ -4,7 +4,7 @@ Library    AppiumLibrary
 
 *** Test Cases ***
 
-Should open main home
+Should do a simple click
     Open Application	http://localhost:4723    
     ...                 platformName=Android
     ...                 deviceName=Android Emulator
@@ -12,9 +12,7 @@ Should open main home
     ...                 app=${EXECDIR}/app/yodapp-beta.apk
     ...                 udid=emulator-5554
     ...                 autoGrantPermissions=true
-
     Wait Until Page Contains    Yodapp    10
-    Wait Until Page Contains    Mobile Training    10
-    Wait Until Page Contains    by Papito    10
-
+    Click Text    QAX    10
+    Wait Until Page Contains    Clique em Botões    10
     Close Application
