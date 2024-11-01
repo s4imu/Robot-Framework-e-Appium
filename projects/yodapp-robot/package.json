@@ -1,0 +1,17 @@
+{
+  "name": "yodapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Symon Barreto",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "appium": "^2.12.1"
+  },
+  "devDependencies": {
+    "appium-uiautomator2-driver": "^3.8.1"
+  }
+}

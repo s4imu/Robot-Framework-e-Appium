@@ -19,3 +19,6 @@ Robot + Appium repository offered by QAx and Fernando Papito. This project utili
    ```bash
    cd Automation-Python-and-Robot-Framework/
    ```
+
+pip install --upgrade robotframework-appiumlibrary
+appium driver install uiautomator2
