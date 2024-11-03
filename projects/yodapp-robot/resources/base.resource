@@ -5,6 +5,7 @@ Library    AppiumLibrary
 *** Variables ***
 ${START}    QAX
 
+
 *** Keywords ***
 
 Start session
@@ -26,20 +27,30 @@ Open side senu
     Wait Until Element Is Visible    ${hamburguerMenu}
     Click Element    ${hamburguerMenu}
 
-Navigate to Clique em Botões
-    ${cliqueEmBotoesButton}    Set Variable    xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]
-    Click Element    ${cliqueEmBotoesButton}
+Navigate to page
+    [Arguments]    ${CLICKMENUITEMBUTTON}  ${PAGETITLE}  
+    Click Element    ${CLICKMENUITEMBUTTON} 
 
     ${cliqueEmBotoesPageTittle}    Set Variable    xpath=//android.widget.TextView[@resource-id="com.qaxperience.yodapp:id/toolbarTitle"]
-    Element Should Contain Text    ${cliqueEmBotoesPageTittle}    Clique em Botões
+    Element Should Contain Text    ${cliqueEmBotoesPageTittle}    ${PAGETITLE}  
 
-Go to Clique Simples page
-    Wait Until Page Contains    Clique simples
-    Click Text    Clique simples
+Go to item page
+    [Arguments]    ${PAGETITLE}    ${ITEMPAGEBUTTONTEXT}
+    Wait Until Page Contains    ${PAGETITLE}
+    Click Text    ${ITEMPAGEBUTTONTEXT}
     
-    Wait Until Page Contains    CLIQUE SIMPLES
+
+Do a simple click
+    [Arguments]    ${TEXTBUTTON} 
+    Wait Until Page Contains    ${TEXTBUTTON}
+    Click Text    ${TEXTBUTTON}
+
+Do a long click
+    [Arguments]    ${ELEMENTLOCATOR}
+    ${positions}    Get Element Location    ${ELEMENTLOCATOR}
+    Tap With Positions    1000    ${${positions}[x], ${positions}[y]}
 
 Validate toast message
-    Click Text    CLIQUE SIMPLES
+   [Arguments]        ${MESSAGE}
 
-    Wait Until Page Contains    Isso é um clique simples
+    Wait Until Page Contains    ${MESSAGE}
