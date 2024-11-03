@@ -54,3 +54,7 @@ Validate toast message
    [Arguments]        ${MESSAGE}
 
     Wait Until Page Contains    ${MESSAGE}
+
+Click checkbox list item
+    [Arguments]    ${itemName}
+    Click Element    xpath={//android.widget.CheckBox[contains(@text, '${itemName}')]}
