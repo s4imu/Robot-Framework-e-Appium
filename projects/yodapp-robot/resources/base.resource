@@ -64,3 +64,10 @@ Click checkbox list itens
 Click radio item
     [Arguments]    ${itemName}
     Click Element    xpath=//android.widget.RadioButton[contains(@text, "${itemName}")]
+
+Sign in
+    [Arguments]    ${EMAIL}    ${PASSWORD}
+    Input Text    id=com.qaxperience.yodapp:id/etEmail    ${EMAIL}
+    Input Password    id=com.qaxperience.yodapp:id/etPassword    ${PASSWORD}
+    Click Text    ENTRAR
+
