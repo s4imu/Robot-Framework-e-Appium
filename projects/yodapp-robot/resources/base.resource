@@ -55,6 +55,12 @@ Validate toast message
 
     Wait Until Page Contains    ${MESSAGE}
 
-Click checkbox list item
+Click checkbox list itens
+    [Arguments]    @{list}
+    FOR    ${item}    IN    @{list}
+        Click Element    xpath=//android.widget.CheckBox[contains(@text, "${item}")]
+    END
+
+Click radio item
     [Arguments]    ${itemName}
-    Click Element    xpath={//android.widget.CheckBox[contains(@text, '${itemName}')]}
+    Click Element    xpath=//android.widget.RadioButton[contains(@text, "${itemName}")]

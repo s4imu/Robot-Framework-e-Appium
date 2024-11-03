@@ -8,15 +8,13 @@ ${checkERadioButton}    xpath=//*[@resource-id="com.qaxperience.yodapp:id/navVie
 
 *** Test Cases ***
 
-Should mark checkbox itens
+Should mark radio item
     Start session
     Start app
     Open side senu
     Navigate to page    ${checkERadioButton}    Check e Radio
-    Go to item page    Check e Radio   Checkbox
+    Go to item page    Check e Radio   Botões de radio
     
-    @{techs}    Create List    Ruby    Python    Java    Javascript    C#    Robot Framework
-    
-    Click checkbox list itens    @{techs}
+    Click radio item    Java
 
     Close Application
