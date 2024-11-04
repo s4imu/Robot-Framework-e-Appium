@@ -11,7 +11,7 @@ ${checkERadioButton}    xpath=//*[@resource-id="com.qaxperience.yodapp:id/navVie
 Should mark checkbox itens
     Start session
     Start app
-    Open side senu
+    Open side menu
     Navigate to page    ${checkERadioButton}    Check e Radio
     Go to item page    Check e Radio   Checkbox
     

@@ -12,7 +12,7 @@ ${cliqueLongoButton}    id=com.qaxperience.yodapp:id/long_click
 Should do a simple click
     Start session
     Start app
-    Open side senu
+    Open side menu
     Navigate to page    ${cliqueEmBotoesButton}    Clique em Botões
     Go to item page    Clique em Botões   Clique simples 
     Do a simple click    CLIQUE SIMPLES
@@ -24,7 +24,7 @@ Should do a long click
     [Tags]    only
     Start session
     Start app
-    Open side senu
+    Open side menu
     Navigate to page    ${cliqueEmBotoesButton}    Clique em Botões
     Go to item page    Clique em Botões   Clique longo 
     Do a long click    ${cliqueLongoButton}    

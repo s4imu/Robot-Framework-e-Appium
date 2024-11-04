@@ -21,7 +21,7 @@ Start app
     Wait Until Page Contains    ${START}    5
     Click Text    ${START}  
 
-Open side senu
+Open side menu
     ${hamburguerMenu}    Set Variable    xpath=//android.widget.ImageButton[@content-desc="Open navigation drawer"]  
     
     Wait Until Element Is Visible    ${hamburguerMenu}
@@ -65,9 +65,22 @@ Click radio item
     [Arguments]    ${itemName}
     Click Element    xpath=//android.widget.RadioButton[contains(@text, "${itemName}")]
 
+Select Spinner Item
+    [Arguments]    ${SPINNERITEM}
+    Click Element    id=android:id/text1
+    Wait Until Element Is Visible    class=android.widget.ListView
+    Click Text    ${SPINNERITEM}
+
 Sign in
     [Arguments]    ${EMAIL}    ${PASSWORD}
     Input Text    id=com.qaxperience.yodapp:id/etEmail    ${EMAIL}
     Input Password    id=com.qaxperience.yodapp:id/etPassword    ${PASSWORD}
     Click Text    ENTRAR
 
+Sign up
+    [Arguments]    ${NAME}    ${EMAIL}    ${PASSWORD}    ${SPINNERITEM}
+    Input Text    id=com.qaxperience.yodapp:id/etUsername    ${NAME}
+    Input Text    id=com.qaxperience.yodapp:id/etEmail    ${EMAIL}
+    Input Password    id=com.qaxperience.yodapp:id/etPassword    ${PASSWORD}
+    Select Spinner Item    ${SPINNERITEM}
+    Click Text    CADASTRAR

@@ -13,7 +13,7 @@ ${WRONGPASSWORD}    jedO
 Should Login Successful
     Start session
     Start app
-    Open side senu
+    Open side menu
     Navigate to page    ${checkFormulariosButton}    Formulários
     Go to item page    Formulários   Login
     Sign in   ${EMAIL}    ${PASSWORD} 
@@ -24,7 +24,7 @@ Should Login Successful
 Shouldn't Login Successful
     Start session
     Start app
-    Open side senu
+    Open side menu
     Navigate to page    ${checkFormulariosButton}    Formulários
     Go to item page    Formulários   Login
     Sign in   ${EMAIL}    ${WRONGPASSWORD} 
