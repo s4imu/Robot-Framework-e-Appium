@@ -84,3 +84,19 @@ Sign up
     Input Password    id=com.qaxperience.yodapp:id/etPassword    ${PASSWORD}
     Select Spinner Item    ${SPINNERITEM}
     Click Text    CADASTRAR
+
+Swipe left
+    [Arguments]    ${distance}    ${itemLocator}        
+    ${positions}    Get Element Location    ${itemLocator} 
+    
+    ${start_x}    Set Variable    ${positions}[x]
+    ${start_y}    Set Variable    ${positions}[y]
+    ${offset_x}   Evaluate    ${start_x} - ${distance} 
+    ${offset_y}   Set Variable    ${start_y}
+    Swipe    ${start_x}    ${start_y}    ${offset_x}    ${offset_y}    1000
+
+Remove card
+    [Arguments]    ${cardName}
+    Click Element    id=com.qaxperience.yodapp:id/btnRemove
+
+    Wait Until Page Does Not Contain    ${cardName}
