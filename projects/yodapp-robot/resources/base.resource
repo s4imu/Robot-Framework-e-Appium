@@ -27,6 +27,11 @@ Open side menu
     Wait Until Element Is Visible    ${hamburguerMenu}
     Click Element    ${hamburguerMenu}
 
+Setup test
+    Start session
+    Start app
+    Open side menu
+
 Navigate to page
     [Arguments]    ${CLICKMENUITEMBUTTON}  ${PAGETITLE}  
     Click Element    ${CLICKMENUITEMBUTTON} 

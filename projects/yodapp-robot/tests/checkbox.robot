@@ -1,17 +1,15 @@
 *** Settings ***
 
-Library    AppiumLibrary
 Resource    ../resources/base.resource
+Test Setup    Setup test
+Test Teardown    Close Application
 
 *** Variables ***
 ${checkERadioButton}    xpath=//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Check e Radio"]
 
 *** Test Cases ***
 
-Should mark checkbox itens
-    Start session
-    Start app
-    Open side menu
+TC03 - Should mark checkbox itens
     Navigate to page    ${checkERadioButton}    Check e Radio
     Go to item page    Check e Radio   Checkbox
     
@@ -19,4 +17,3 @@ Should mark checkbox itens
     
     Click checkbox list itens    @{techs}
 
-    Close Application
