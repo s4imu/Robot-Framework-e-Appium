@@ -1,6 +1,6 @@
 # Robot-Framework-e-Appium
 
-Robot + Appium repository offered by QAx and Fernando Papito. This project utilize Robot + Appium to automate -. Robot Framework is a versatile automation framework that allows developers to write readable and reusable test cases for end-to-end testing across different browsers and platforms.
+Robot + Appium repository offered by QAx and Fernando Papito. This project utilize Robot + Appium to automate some android apps. Robot Framework is a versatile automation framework that allows developers to write readable and reusable test cases for end-to-end testing across different browsers and platforms.
 
 ## Setup
 
@@ -16,9 +16,31 @@ Robot + Appium repository offered by QAx and Fernando Papito. This project utili
    ```
 
 2. Access the repository with the following command:
+
    ```bash
    cd Automation-Python-and-Robot-Framework/
    ```
 
-pip install --upgrade robotframework-appiumlibrary
-appium driver install uiautomator2
+3. Install python dependencies:
+
+   ```bash
+   pip install robotframework && pip install --upgrade robotframework--appiumlibrary && pip install pymongo
+   ```
+
+4. Select the project directory you want to execute the tests
+
+7.run the command inside the choosen directory
+
+```bash
+npm install
+```
+
+8. .run the command inside the choosen directory
+   ```bash
+   npx appium
+   ```
+9. Run the test suite
+
+   ```bash
+   robot test/
+   ```
