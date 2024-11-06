@@ -4,8 +4,7 @@ Documentation    Elements and action from Login Page
 Library    AppiumLibrary
 
 *** Variables ***
-${API_IP}    192.168.0.112
-
+${API_IP}    172.20.10.2
 
 *** Keywords ***
 

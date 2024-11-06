@@ -1,8 +1,8 @@
 *** Settings ***
 Documentation    Task Tests
 Resource    ${EXECDIR}/resource/base.resource
-Suite Setup    Start session
-Suite Teardown    End session
+Test Setup    Start session
+Test Teardown    End session
 
 *** Variables **
 ${task}   Aline Cabecinha 1
@@ -11,7 +11,11 @@ ${task}   Aline Cabecinha 1
 
 
 TC02 - Successful Create Task
+    Remove task from database    ${task}
     Create task    ${task}  
-    
-TC03 - Successful Delete Task
+
+TC03 - Succesful Complete Task
+    Complete task    ${task}
+
+TC04 - Successful Delete Task
     Delete task    ${task}  

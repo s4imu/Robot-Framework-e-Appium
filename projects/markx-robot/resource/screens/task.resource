@@ -16,9 +16,15 @@ Create task
     Click Element    ${NEW_TASK_BTN}
     Wait Until Element Is Visible    //*[@text="${TASK_TITLE}"]   
 
+Complete task
+    [Arguments]    ${TASK_TITLE}     
+    Click Element    //*[@text="${TASK_TITLE}"]/../..//*[contains(@resource-id, "updateTask")]
+    Wait Until Element Is Visible    //*[@text="${TASK_TITLE}"]/..//android.widget.ImageView
+
+
 Delete task
     [Arguments]    ${TASK_TITLE}     
     Click Element    //*[@text="${TASK_TITLE}"]/../..//*[contains(@resource-id, "removeTask")]
     Wait Until Page Contains    Remover
     Click Text    SIM
-    Wait Until Page Does Not Contain Element    ${TASK_TITLE}
+    Wait Until Page Does Not Contain Element        //*[@text="${TASK_TITLE}"] 
